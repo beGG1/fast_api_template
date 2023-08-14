@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "fast-api-template"
+version = "0.1.0"
+description = ""
+authors = ["beGGi"]
+readme = "README.md"
+packages = [{include = "fast_api_template"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.101.0"
+
+
+[tool.poetry.group.linter.dependencies]
+wemake-python-styleguide = "^0.18.0"
+isort = "^5.12.0"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+known_third_party = ["pydantic", "requests"]
+known_first_party = ["core", "extract"]
+length_sort_sections = ["firstparty", "localfolder"]
+import_heading_stdlib = "Standard Library"
+import_heading_thirdparty = "Third Party Library"
+import_heading_firstparty = "My Stuff"
+import_heading_localfolder = "My Local Stuff"

@@ -1,0 +1,54 @@
+[flake8]
+max-line-length = 120
+max-complexity = 10
+max-line-complexity = 17
+max-cognitive-score = 15
+max-imports = 15
+max-module-members = 10
+
+extend-ignore = [
+    D100,       # Missing docstring in public module
+    D101,       # Missing docstring in public class
+    D102,       # Missing docstring in public method
+    D103,       # Missing docstring in public function
+    D104,       # Missing docstring in public package
+    D105,       # Missing docstring in magic method
+    D106,       # Missing docstring in public nested class
+    D107,       # Missing docstring in init
+
+    WPS305,     # Found f string
+    WPS306,     # Found class without a base class
+    WPS326,     # Found implicit string concatination
+
+    WPS404,     # Found complex default value
+    WPS412,     # Found __init__.py module with logic
+    WPS432,     # Found magic number
+]
+
+exclude = 
+    *test*,
+    doc/*,
+    db/*,
+    LICENCE,
+    README.md,
+    .gitignore,
+    .pre-commit-config,yaml,
+    .git,
+    .flake8,
+    pycache,
+    build,
+    dist,
+    *venv*,
+    pyproject.toml,
+    *.env,
+    *.txt,
+    *.html,
+    *.css,
+    *xml,
+    *.zip,
+    *.log,
+    *.yaml,
+    *.yml,
+    Dockerfile,
+    .dockerignore,
+    poetry.lock,
